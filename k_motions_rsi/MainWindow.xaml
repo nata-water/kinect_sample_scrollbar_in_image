@@ -1,0 +1,16 @@
+﻿<Window x:Class="k_motions_rsi.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="725" Width="1095" xmlns:k="http://schemas.microsoft.com/kinect/2013" FlowDirection="LeftToRight" Loaded="Window_Loaded">
+    <Grid Height="657" Width="1034">
+        <k:KinectSensorChooserUI HorizontalAlignment="Left" Margin="12,12,0,0" Name="sensorChooserUI" VerticalAlignment="Top" />
+        <k:KinectUserViewer VerticalAlignment="Top" HorizontalAlignment="Center"  k:KinectRegion.KinectRegion="{Binding ElementName=kinectRegion}" Height="100" Margin="457,545,443,0" />
+        <k:KinectRegion HorizontalAlignment="Left" Name="kinectRegion" Margin="12,58,0,0" Width="1010" VerticalAlignment="Top" Height="481">
+            <WrapPanel Height="448.423" Width="1003.534" HorizontalAlignment="Left" VerticalAlignment="Top" UseLayoutRounding="False">
+                <k:KinectScrollViewer Height="442.423" Name="kinectScrollViewer1" Width="897.514" CanContentScroll="True" HorizontalScrollBarVisibility="Disabled">
+                    <Image Height="310" Name="image1" Stretch="None" Width="822" Source="https://i1.sndcdn.com/avatars-000033400603-8omh8x-t500x500.jpg?cd7da6d" />
+                </k:KinectScrollViewer>
+            </WrapPanel>
+        </k:KinectRegion>
+    </Grid>
+</Window>
